@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int row,col,rowNumber,sum=0;
+    int row,col,rowNumber,columnNumber,sumRow=0,sumCol=0;
 
     cout << "Enter the no. Rows := ";
     cin >> row;
@@ -23,19 +23,34 @@ int main()
     
     cout << endl << endl << "Enter the number of row you went to sum := ";
     cin >> rowNumber;
+    cout << endl << endl << "Enter the number of column you went to sum := ";
+    cin >> columnNumber;
 
     // sum
-    for (int i = 0; i <= rowNumber; i++)
+    cout << endl << endl << "Element of row " << rowNumber <<" := \n";
+    for (int i = rowNumber; i <= rowNumber; i++)
     {
         for (int j = 0; j < col; j++)
         {
-            sum += a[i][j];
+            cout << a[i][j] << "\t";
+            sumRow += a[i][j];
         }
         
     }
-        
+    cout << endl << endl << "Sum of Row " << rowNumber << " is := " << sumRow;
 
-    cout << endl << endl << "Sum of Row " << rowNumber << "is := " << sum;
+    cout << endl << endl << "Element of column " << columnNumber <<" := \n";
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = columnNumber; j <= columnNumber; j++)
+        {
+            cout << a[i][j] << "\t";
+            sumCol += a[i][j];
+        }
+        
+    }
+    cout << endl << endl << "Sum of Column " << columnNumber << " is := " << sumCol;
+    
 
 
     return 0;
