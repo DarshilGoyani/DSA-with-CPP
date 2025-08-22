@@ -52,7 +52,6 @@ main(){
         cout << "Press 5 for %" << endl;
         cout << "Press 0 for Exit" << endl;
         cin >> choice;
-        
         switch (choice)
         {
         case 1:
