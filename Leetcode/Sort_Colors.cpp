@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
     }
 
     // printing original array
-    cout << "Original Arrya := ";
+    cout << endl << endl << "Original Arrya := ";
     for (int i = 0; i < size; i++)
     {
         cout << a[i] << "  ";
@@ -24,25 +24,24 @@ int main(int argc, char const *argv[])
     
 
     // logic
-    int min = 0;
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < size-1; i++)
     {
-        for (int j = i+1; j < size; j++)
+        for (int j = 0; j < size-i-1; j++)
         {
-            if (a[i] <= min)
+            if (a[j] > a[j+1])
             {
-                min = a[i];
+                int swap = a[j];
+                a[j] = a[j+1];
+                a[j+1] = swap;
             
             }
-            
         }
         
     }
-    
-
+     
 
     // printing updated array
-    cout << "Updated Arrya := ";
+    cout << endl << endl << "Updated Arrya := ";
     for (int i = 0; i < size; i++)
     {
         cout << a[i] << "  ";
